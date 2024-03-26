@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Atividades</title>
+    <style>
+         @charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS DA INTERFACE */
+
+body {
+    background-color: #15142b;
+    background-image: linear-gradient(180deg, #372991, #15142b);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header, main, section, article {
+    max-width: 700px;
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 3px 3px 0px black;
+}
+
+header >p{
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+main, section, article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+}
+
+footer {
+    display: block;
+    width: 100vw;
+    background-color: #291f6c;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    padding: 5px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+h2, h3, h4 {
+    color: #372991;
+    margin: 0 0 10px 0;
+}
+
+a {
+    color: #15142b;
+    background-color: rgba(55, 41, 145, 0.1);
+    padding: 0 3px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: .5px dotted #372991;
+}
+
+a:hover {
+    color: #372991;
+    border-bottom: 1px solid #372991;
+}
+
+/* TABELAS E LISTAS */
+
+table {
+    min-width: 400px;
+    border-spacing: 0px;
+    border: 0.5px solid #372991;
+    margin: 10px auto;
+}
+
+table th {
+    background-color: #372991;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+table td {
+    padding: 5px;
+}
+
+table tr {
+    background-color: rgba(55, 41, 145, 0.05);
+}
+
+table tr:nth-child(odd) {
+    background-color: rgba(55, 41, 145, 0.3);
+}
+
+table.divisao {
+    border: 1px solid white;
+}
+
+table.divisao td {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+table.divisao  tr:nth-child(1) td:nth-child(2) {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(2) {
+    border-left: 3px solid black;
+}
+
+table.divisao tr:nth-child(2) td:nth-child(1) {
+    text-decoration: underline;
+}
+
+ul > li::marker {
+    color: #372991;
+}
+
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    width: fit-content;
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=reset] {
+    width: 100%;
+    background-color: #eb9903;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #c27013;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: #372991;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+fieldset {
+    border: 0.5px dotted #372991;
+}
+
+fieldset > legend {
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    border-radius: 5px;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="mind_map.png" alt="mind_mapfoto">
+        <h1>Our English Lessons</h1>
+        
+    </header>
+
+    <section>
+        <img src="legalzao.png" alt="legalzaofoto">
+        <fieldset>
+            <legend>Let's do it</legend>
+            <p>Put these expretions in english (Coloque estas expressões em inglês)</p>
+            <form id="form9ano" action="" method="post">
+                <label for="aluno">Aluno:</label>
+                <input type="text" name="aluno" id="aluno">
+                <label for="turma">Turma</label>
+                <input type="text" name="turma" id="turma">
+                <label for="quest1">Uma vida saudável para todos</label>
+                <input type="text" name="quest1" id="quest1">
+                <label for="quest2">O cuidado a saúde é um direito humano</label>
+                <input type="text" name="quest2" id="quest2">
+                <label for="quest3">Exercitar-se regularmente</label>
+                <input type="text" name="quest3" id="quest3">
+                <label for="quest4">Comer comida saudável</label>
+                <input type="text" name="quest4" id="quest4">
+                <label for="quest5">Reduzir o estresse </label>
+                <input type="text" name="quest5" id="quest5">
+                <label for="quest6">Beber bastante água</label>
+                <input type="text" name="quest6" id="quest6">
+                <label for="quest7">Estilo de vida saudável</label>
+                <input type="text" name="quest7" id="quest7">
+            <p>Na página 22 temos um infographic "What govenrnments can do"( O que o governo pode fazer). Reescreva em inglês os intens que respondem a essa questão</p>
+                <label for="quest8">Item 1:</label>
+                <input type="text" name="quest8" id="quest8">
+                <label for="quest9">Item 2:</label>
+                <input type="text" name="quest9" id="quest9">
+                <label for="quest10">Item 3:</label>
+                <input type="text" name="quest10" id="quest10">
+                <label for="quest11">Item 4</label>
+                <input type="text" name="quest11" id="quest11">
+                <label for="quest12">Defina mind map:</label>
+                <input type="text" name="quest12"   id="quest12">
+                <label for="quest13">Defina infographic:</label>
+                <input type="text" name="quest13" id="quest13">
+                <input type="submit" value="Enviar">
+            
+        
+            </form>
+        </fieldset>
+    </section>
+        
+    <script>
+        document.getElementById("form9ano").addEventListener("submit", function(event){
+            event.preventDefault();
+            var aluno=document.getElementById("aluno").value;
+            var turma=document.getElementById("turma").value;
+            var perg1=document.getElementById("quest1").value;
+            var perg2=document.getElementById("quest2").value;
+            var perg3=document.getElementById("quest3").value;
+            var perg4=document.getElementById("quest4").value;
+            var perg5=document.getElementById("quest5").value;
+            var perg6=document.getElementById("quest6").value;
+            var perg7=document.getElementById("quest7").value;
+            var perg8=document.getElementById("quest8").value;
+            var perg9=document.getElementById("quest9").value;
+            var perg10=document.getElementById("quest10").value;
+            var perg11=document.getElementById("quest11").value;
+            var perg12=document.getElementById("quest12").value;
+            var perg13=document.getElementById("quest13").value;
+
+            //respostas corretas
+
+            var resp1="A healthy lifestyle for everyone";
+            var resp2="Healthcare is a huaman right";
+            var resp3="Exercise regularly";
+            var resp4="Eat healthily";
+            var resp5="Reduce stress";
+            var resp6="Drink plenty of water";
+            var resp7="Healthy lifestyle";
+            var resp8="Counts adolescents(aged 10-19 years) as a distinct group in heath statistics";
+            var resp9="Involve adolescents in the design of health policies and programmes that affect them";
+            var resp10="Support trainning of healh professionals in adolescents health";
+            var resp11="Ensure laws and policies protect adolescents'rights and dignity";
+            var resp12="Conteúdos resumidos em forma de esquema";
+            var resp13="Conteúdos em forma de cartazes";
+
+            //verificando as respostas
+            var corretas=0;
+            if(perg1===resp1){
+                corretas++;
+            }
+            if(perg2===resp2){
+                corretas++;
+            }
+            if(perg3===resp3){
+                corretas++;
+            }
+            if(perg4===resp4){
+                corretas++;
+            }
+            if(perg5===resp5){
+                corretas++;
+            }
+            if(perg6===resp6){
+                corretas++;
+            }
+            if(perg7===resp7){
+                corretas++;
+            }
+            if(perg8===resp8){
+                corretas++;
+            }
+            if(perg9===resp9){
+                corretas++;
+            }
+            if(perg10===resp10){
+                corretas++;
+            }
+            if(perg11===resp11){
+                corretas++;
+            }
+            if(perg12===resp12){
+                corretas++;
+            }
+            if(perg13===resp13){
+                corretas++;
+            }
+
+            //exibindo o feedback
+
+            var mensagem="Respostas enviadas com sucesso!\nAluno: " + aluno + "n\Turma: "+turma +"\nVocê acertou " + corretas + "de 13 perguntas.";
+            alert(mensagem);
+        })
+        
+    </script>
+    
+</body>
+</html>
